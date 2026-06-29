@@ -403,7 +403,7 @@
 
         // --- CRYPTO HELPER & SESSION VERIFICATION ---
         // 소스코드에 암호를 평문으로 노출하지 않기 위한 SHA-256 해시 검증 기법 (0618의 고유 매핑 해시)
-        const SECURE_HASH = "b9bf8b7762645607db79b8979fcfa0f4e4bf7e997a0c5c37894a864d4b8e23f0"; 
+        const SECURE_HASH = "fe30263309a4789528da5e656f50005d53a9689408018da117c777264858b981"; 
 
         async function sha256(message) {
             const msgBuffer = new TextEncoder().encode(message);
