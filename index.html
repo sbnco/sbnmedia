@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>(주)에스비엔 - SBN Official</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts Noto Sans KR -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -55,11 +52,9 @@
 </head>
 <body class="bg-slate-50 text-slate-800 relative antialiased selection:bg-blue-800 selection:text-white">
 
-    <!-- TOP NAVIGATION BAR -->
     <header id="nav-header" class="fixed top-0 left-0 w-full z-40 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- SBN Logo Area -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="#hero" class="flex items-center space-x-2">
                         <span class="text-2xl font-black text-blue-800 tracking-wider">SBN</span>
@@ -67,7 +62,6 @@
                     </a>
                 </div>
                 
-                <!-- Desktop Nav Elements -->
                 <nav class="hidden md:flex space-x-8 text-sm font-medium">
                     <a href="#about" class="nav-link text-slate-600 hover:text-blue-800 transition-colors py-2 border-b-2 border-transparent">ABOUT</a>
                     <a href="#portfolio" class="nav-link text-slate-600 hover:text-blue-800 transition-colors py-2 border-b-2 border-transparent">PORTFOLIO</a>
@@ -76,7 +70,6 @@
                     <a href="#location" class="nav-link text-slate-600 hover:text-blue-800 transition-colors py-2 border-b-2 border-transparent">LOCATION</a>
                 </nav>
 
-                <!-- Admin & Mobile Toggle Utility -->
                 <div class="flex items-center space-x-4">
                     <button onclick="toggleAdminMode()" id="admin-toggle-btn" class="text-xs font-semibold px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded transition-all flex items-center space-x-1">
                         <i class="fa-solid fa-lock" id="admin-lock-icon"></i>
@@ -89,7 +82,6 @@
             </div>
         </div>
 
-        <!-- Mobile Dynamic Navigation -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 transition-all duration-300">
             <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3 text-center">
                 <a href="#about" class="mobile-nav-link block px-3 py-3 rounded-md text-base font-medium text-slate-600 hover:bg-slate-50 hover:text-blue-800">ABOUT</a>
@@ -101,17 +93,12 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
     <section id="hero" class="relative h-screen flex items-center justify-center bg-slate-900 overflow-hidden pt-20">
-        <!-- Overlay Layer for contrast and atmospheric video layout -->
         <div class="absolute inset-0 z-10 bg-gradient-to-r from-slate-950/80 via-slate-900/60 to-slate-950/80"></div>
-        
-        <!-- Video Representation / Cinematic Background -->
         <div class="absolute inset-0 w-full h-full object-cover z-0">
             <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=1920" class="w-full h-full object-cover scale-105 animate-[pulse_6s_infinite_alternate]" alt="영상 편집 및 포스트 프로덕션 작업 화면">
         </div>
 
-        <!-- Slogan Contents -->
         <div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
             <span data-editable-key="hero_badge" class="inline-block px-4 py-1.5 bg-blue-800/80 text-white text-xs font-semibold tracking-widest rounded-full uppercase mb-6 backdrop-blur-sm">
                 SBN VIDEO PRODUCTION
@@ -130,7 +117,6 @@
             </div>
         </div>
 
-        <!-- Down Arrow Indicator -->
         <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
             <a href="#about" aria-label="회사소개 섹션으로 이동" class="text-white hover:text-blue-400 transition-colors">
                 <i class="fa-solid fa-chevron-down text-2xl"></i>
@@ -138,7 +124,6 @@
         </div>
     </section>
 
-    <!-- ADMIN CONSOLE ALERT BAR -->
     <div id="admin-bar" class="hidden bg-blue-900 text-white text-xs py-3 px-4 sticky top-20 z-30 flex items-center justify-between shadow-lg">
         <div class="flex items-center space-x-2">
             <span class="inline-block w-2.5 h-2.5 bg-green-400 rounded-full animate-ping"></span>
@@ -148,56 +133,45 @@
         <button onclick="toggleAdminMode()" class="bg-blue-850 hover:bg-blue-750 px-4 py-1.5 rounded text-white font-semibold transition-all">편집 완료</button>
     </div>
 
-    <!-- ABOUT SECTION -->
     <section id="about" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Section Title -->
             <div class="text-center max-w-3xl mx-auto mb-20">
                 <h2 data-editable-key="title_about_sub" class="text-base font-bold text-blue-800 uppercase tracking-widest mb-3">ABOUT SBN</h2>
                 <p id="editable-about-headline" data-editable-key="about_headline" class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">회사소개</p>
                 <div class="w-12 h-1 bg-blue-800 mx-auto mt-4 rounded"></div>
             </div>
 
-            <!-- Grid Layout: Timeline History & Organization -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-24">
-                
-                <!-- 1. History Timeline -->
                 <div class="space-y-8">
                     <h3 class="text-xl font-bold text-slate-900 flex items-center space-x-2 border-b pb-4 border-slate-100">
                         <i class="fa-solid fa-clock-rotate-left text-blue-800"></i>
                         <span data-editable-key="title_history">SBN 연혁 (History)</span>
                     </h3>
                     <div id="timeline-container" class="relative border-l-2 border-blue-100 pl-6 ml-2 space-y-10">
-                        <!-- timeline item 1 -->
                         <div class="relative">
                             <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-blue-800 border-4 border-white shadow"></div>
                             <span data-editable-key="timeline_y1" class="text-sm font-bold text-blue-800">2017년</span>
                             <h4 data-editable-key="timeline_t1" class="text-md font-bold text-slate-800 mt-1">YTN 광고기획 혁신 CEO 대상</h4>
-                            <p data-editable-key="timeline_d1" class="text-sm text-slate-500 mt-1">광고기획 및 탁월한 연출력을 인정받어 YTN 선정 혁신 대상 수상</p>
+                            <p data-editable-key="timeline_d1" class="text-sm text-slate-500 mt-1">광고기획 및 탁월한 연출력을 인정받아 YTN 선정 혁신 대상 수상</p>
                         </div>
-                        <!-- timeline item 2 -->
                         <div class="relative">
                             <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-blue-800 border-4 border-white shadow"></div>
                             <span data-editable-key="timeline_y2" class="text-sm font-bold text-blue-800">2010년</span>
                             <h4 data-editable-key="timeline_t2" class="text-md font-bold text-slate-800 mt-1">본사 주소 이전</h4>
                             <p data-editable-key="timeline_d2" class="text-sm text-slate-500 mt-1">확장 인프라 및 최신식 오픈형 자체 크로마키 스튜디오 구축을 위한 가산 디지털단지 본사 주소 변경</p>
                         </div>
-                        <!-- timeline item 3 -->
                         <div class="relative">
                             <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-blue-800 border-4 border-white shadow"></div>
                             <span data-editable-key="timeline_y3" class="text-sm font-bold text-blue-800">2009년</span>
                             <h4 data-editable-key="timeline_t3" class="text-md font-bold text-slate-800 mt-1">대한민국 커뮤니케이션 대상 수상</h4>
                             <p data-editable-key="timeline_d3" class="text-sm text-slate-500 mt-1">한국방송광고공사 사장상 수상으로 독보적인 제작 가치 확인</p>
                         </div>
-                        <!-- timeline item 4 -->
                         <div class="relative">
                             <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-blue-800 border-4 border-white shadow"></div>
                             <span data-editable-key="timeline_y4" class="text-sm font-bold text-blue-800">2005년</span>
                             <h4 data-editable-key="timeline_t4" class="text-md font-bold text-slate-800 mt-1">매일경제광고대상 공익부문 금상</h4>
                             <p data-editable-key="timeline_d4" class="text-sm text-slate-500 mt-1">차별화된 영상 연출력을 바탕으로 한 공익 광고 캠페인 금상 수상</p>
                         </div>
-                        <!-- timeline item 5 -->
                         <div class="relative">
                             <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-blue-800 border-4 border-white shadow"></div>
                             <span data-editable-key="timeline_y5" class="text-sm font-bold text-blue-800">2004년 7월</span>
@@ -207,34 +181,23 @@
                     </div>
                 </div>
 
-                <!-- 2. Organization Chart -->
                 <div class="space-y-8">
                     <h3 class="text-xl font-bold text-slate-900 flex items-center space-x-2 border-b pb-4 border-slate-100">
                         <i class="fa-solid fa-sitemap text-blue-800"></i>
                         <span data-editable-key="title_org">조직도 (Organization)</span>
                     </h3>
-                    
                     <div class="bg-slate-50 p-6 sm:p-8 rounded-xl border border-slate-100 shadow-sm">
                         <div class="flex flex-col items-center">
-                            
-                            <!-- CEO Node -->
                             <div class="bg-blue-800 text-white py-3.5 px-6 rounded-lg text-center shadow-md w-full max-w-[240px] transition-transform hover:scale-[1.02]">
                                 <p data-editable-key="org_ceo_label" class="text-xs font-medium opacity-80 uppercase tracking-wider">대표이사</p>
                                 <p data-editable-key="org_ceo" class="text-base font-bold mt-0.5">김태윤 대표이사</p>
                             </div>
-
-                            <!-- Down line -->
                             <div class="w-0.5 h-6 bg-slate-300"></div>
-
-                            <!-- Mid Line Junction -->
                             <div class="w-full max-w-[400px] border-t-2 border-slate-300 flex justify-between relative">
                                 <div class="absolute -top-0.5 left-0 w-0.5 h-4 bg-slate-300"></div>
                                 <div class="absolute -top-0.5 right-0 w-0.5 h-4 bg-slate-300"></div>
                             </div>
-
-                            <!-- Dual Offices Grid -->
                             <div class="grid grid-cols-2 gap-4 sm:gap-8 w-full mt-4">
-                                <!-- 기획관리실 -->
                                 <div class="flex flex-col items-center">
                                     <div data-editable-key="org_dept1_title" class="bg-slate-800 text-white py-2 px-4 rounded-md text-center text-sm font-bold w-full max-w-[180px] shadow-sm">
                                         기획관리실
@@ -245,8 +208,6 @@
                                         <div data-editable-key="org_dept1_sub2" class="py-1.5 px-2 bg-slate-100 rounded text-slate-700 font-medium">경영관리부</div>
                                     </div>
                                 </div>
-
-                                <!-- 영상제작실 -->
                                 <div class="flex flex-col items-center">
                                     <div data-editable-key="org_dept2_title" class="bg-blue-900 text-white py-2 px-4 rounded-md text-center text-sm font-bold w-full max-w-[180px] shadow-sm">
                                         영상제작실
@@ -260,107 +221,55 @@
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-
             </div>
 
-            <!-- 3. Licenses & Certifications Grid -->
             <div class="mb-24">
                 <h3 class="text-xl font-bold text-slate-900 flex items-center space-x-2 border-b pb-4 border-slate-100 mb-8">
                     <i class="fa-solid fa-award text-blue-800"></i>
                     <span data-editable-key="title_license">보유 인증 및 면허 리스트</span>
                 </h3>
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    <!-- Cert 1 -->
                     <div class="flex items-center space-x-3.5 bg-slate-50 p-4 rounded-lg border border-slate-100 hover:shadow-md hover:bg-white transition-all duration-250">
-                        <div class="w-10 h-10 rounded bg-blue-100 text-blue-800 flex items-center justify-center text-lg flex-shrink-0">
-                            <i class="fa-solid fa-film"></i>
-                        </div>
+                        <div class="w-10 h-10 rounded bg-blue-100 text-blue-800 flex items-center justify-center text-lg flex-shrink-0"><i class="fa-solid fa-film"></i></div>
                         <span data-editable-key="cert_1" class="text-xs sm:text-sm font-semibold text-slate-700">방송영상독립제작사</span>
                     </div>
-                    <!-- Cert 2 -->
                     <div class="flex items-center space-x-3.5 bg-slate-50 p-4 rounded-lg border border-slate-100 hover:shadow-md hover:bg-white transition-all duration-250">
-                        <div class="w-10 h-10 rounded bg-blue-100 text-blue-800 flex items-center justify-center text-lg flex-shrink-0">
-                            <i class="fa-solid fa-masks-theater"></i>
-                        </div>
+                        <div class="w-10 h-10 rounded bg-blue-100 text-blue-800 flex items-center justify-center text-lg flex-shrink-0"><i class="fa-solid fa-masks-theater"></i></div>
                         <span data-editable-key="cert_2" class="text-xs sm:text-sm font-semibold text-slate-700">대중문화예술기획업</span>
                     </div>
-                    <!-- Cert 3 -->
                     <div class="flex items-center space-x-3.5 bg-slate-50 p-4 rounded-lg border border-slate-100 hover:shadow-md hover:bg-white transition-all duration-250">
-                        <div class="w-10 h-10 rounded bg-blue-100 text-blue-800 flex items-center justify-center text-lg flex-shrink-0">
-                            <i class="fa-solid fa-video"></i>
-                        </div>
+                        <div class="w-10 h-10 rounded bg-blue-100 text-blue-800 flex items-center justify-center text-lg flex-shrink-0"><i class="fa-solid fa-video"></i></div>
                         <span data-editable-key="cert_3" class="text-xs sm:text-sm font-semibold text-slate-700">비디오물제작업</span>
                     </div>
-                    <!-- Cert 4 -->
                     <div class="flex items-center space-x-3.5 bg-slate-50 p-4 rounded-lg border border-slate-100 hover:shadow-md hover:bg-white transition-all duration-250">
-                        <div class="w-10 h-10 rounded bg-blue-100 text-blue-800 flex items-center justify-center text-lg flex-shrink-0">
-                            <i class="fa-solid fa-compass-drafting"></i>
-                        </div>
+                        <div class="w-10 h-10 rounded bg-blue-100 text-blue-800 flex items-center justify-center text-lg flex-shrink-0"><i class="fa-solid fa-compass-drafting"></i></div>
                         <span data-editable-key="cert_4" class="text-xs sm:text-sm font-semibold text-slate-700">산업디자인전문회사</span>
-                    </div>
-                    <!-- Cert 5 -->
-                    <div class="flex items-center space-x-3.5 bg-slate-50 p-4 rounded-lg border border-slate-100 hover:shadow-md hover:bg-white transition-all duration-250">
-                        <div class="w-10 h-10 rounded bg-blue-100 text-blue-800 flex items-center justify-center text-lg flex-shrink-0">
-                            <i class="fa-solid fa-laptop-code"></i>
-                        </div>
-                        <span data-editable-key="cert_5" class="text-xs sm:text-sm font-semibold text-slate-700">소프트웨어사업자</span>
-                    </div>
-                    <!-- Cert 6 -->
-                    <div class="flex items-center space-x-3.5 bg-slate-50 p-4 rounded-lg border border-slate-100 hover:shadow-md hover:bg-white transition-all duration-250">
-                        <div class="w-10 h-10 rounded bg-blue-100 text-blue-800 flex items-center justify-center text-lg flex-shrink-0">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-                        </div>
-                        <span data-editable-key="cert_6" class="text-xs sm:text-sm font-semibold text-slate-700">애니메이션제작업</span>
-                    </div>
-                    <!-- Cert 7 -->
-                    <div class="flex items-center space-x-3.5 bg-slate-50 p-4 rounded-lg border border-slate-100 hover:shadow-md hover:bg-white transition-all duration-250">
-                        <div class="w-10 h-10 rounded bg-blue-100 text-blue-800 flex items-center justify-center text-lg flex-shrink-0">
-                            <i class="fa-solid fa-plane-departure"></i>
-                        </div>
-                        <span data-editable-key="cert_7" class="text-xs sm:text-sm font-semibold text-slate-700">애니메이션수출입업</span>
-                    </div>
-                    <!-- Cert 8 -->
-                    <div class="flex items-center space-x-3.5 bg-slate-50 p-4 rounded-lg border border-slate-100 hover:shadow-md hover:bg-white transition-all duration-250">
-                        <div class="w-10 h-10 rounded bg-blue-100 text-blue-800 flex items-center justify-center text-lg flex-shrink-0">
-                            <i class="fa-solid fa-truck-ramp-box"></i>
-                        </div>
-                        <span data-editable-key="cert_8" class="text-xs sm:text-sm font-semibold text-slate-700">애니메이션배급업</span>
                     </div>
                 </div>
             </div>
 
-            <!-- 4. Chroma Key Studio Tab Section & Image Gallery -->
             <div>
                 <h3 class="text-xl font-bold text-slate-900 flex items-center space-x-2 border-b pb-4 border-slate-100 mb-8">
                     <i class="fa-solid fa-camera-retro text-blue-800"></i>
                     <span data-editable-key="title_studio">사내 크로마키 스튜디오 소개</span>
                 </h3>
-
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                    <!-- Tab System UI (Col Span 5) -->
                     <div class="lg:col-span-5 bg-slate-50 rounded-xl border border-slate-100 overflow-hidden shadow-sm">
-                        <!-- Tab Header Buttons -->
                         <div class="flex border-b border-slate-200">
                             <button onclick="switchStudioTab('studio-intro')" id="tab-btn-studio-intro" class="flex-1 py-3 text-sm font-bold text-blue-800 border-b-2 border-blue-800 bg-white transition-all">스튜디오 소개</button>
                             <button onclick="switchStudioTab('studio-specs')" id="tab-btn-studio-specs" class="flex-1 py-3 text-sm font-semibold text-slate-500 hover:text-slate-800 transition-all border-b-2 border-transparent">스튜디오 스펙</button>
                             <button onclick="switchStudioTab('studio-use')" id="tab-btn-studio-use" class="flex-1 py-3 text-sm font-semibold text-slate-500 hover:text-slate-800 transition-all border-b-2 border-transparent">사용 가이드</button>
                         </div>
-                        
-                        <!-- Tab contents container -->
                         <div class="p-6">
-                            <!-- Tab Content: Intro -->
                             <div id="tab-content-studio-intro" class="studio-tab-panel space-y-4">
                                 <h4 data-editable-key="studio_intro_h" class="text-lg font-bold text-slate-900">실내 가변형 OPEN 크로마키 스튜디오</h4>
                                 <p data-editable-key="studio_intro_p" class="text-sm text-slate-600 leading-relaxed">
                                     (주)에스비엔 가산 본사 내부에 위치한 고기능성 자체 스튜디오입니다. 그린 스크린 베이스의 가변형 크로마키 세팅을 통해 가상 프로덕션, 이러닝 콘텐츠, 크리에이티브 광고, 인터뷰 촬영 등 거의 모든 형태의 프로덕션 소화가 가능합니다.
                                 </p>
                             </div>
-
-                            <!-- Tab Content: Specs -->
                             <div id="tab-content-studio-specs" class="studio-tab-panel hidden space-y-4">
                                 <h4 data-editable-key="studio_spec_h" class="text-lg font-bold text-slate-900">스튜디오 상세 정보 및 사양</h4>
                                 <div class="space-y-2.5 text-sm text-slate-600">
@@ -378,8 +287,6 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Tab Content: Use Guide -->
                             <div id="tab-content-studio-use" class="studio-tab-panel hidden space-y-4">
                                 <h4 data-editable-key="studio_guide_h" class="text-lg font-bold text-slate-900">제작 및 대관 사용 절차</h4>
                                 <ol class="space-y-3.5 text-sm text-slate-600">
@@ -400,11 +307,9 @@
                         </div>
                     </div>
 
-                    <!-- Custom Studio Photo Gallery Manager (Col Span 7) -->
                     <div class="lg:col-span-7 space-y-4">
                         <div class="flex items-center justify-between">
                             <span data-editable-key="title_gallery_label" class="text-sm font-bold text-slate-600">스튜디오 현장 사진 갤러리</span>
-                            <!-- Dynamic photo adder for Admin Mode -->
                             <div id="studio-admin-control" class="hidden">
                                 <button onclick="openAddStudioPhotoModal()" class="text-xs px-2.5 py-1.5 bg-blue-800 hover:bg-blue-700 text-white rounded font-medium flex items-center space-x-1 shadow">
                                     <i class="fa-solid fa-plus"></i>
@@ -412,30 +317,21 @@
                                 </button>
                             </div>
                         </div>
-
-                        <!-- Gallery Photos Grid -->
-                        <div id="studio-gallery-grid" class="grid grid-cols-2 gap-4">
-                            <!-- Dynamic elements load here -->
-                        </div>
+                        <div id="studio-gallery-grid" class="grid grid-cols-2 gap-4"></div>
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- PORTFOLIO SECTION -->
     <section id="portfolio" class="py-24 bg-slate-50 border-y border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Title -->
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 data-editable-key="title_port_sub" class="text-base font-bold text-blue-800 uppercase tracking-widest mb-3">PORTFOLIO</h2>
                 <p data-editable-key="title_port_main" class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">영상 포트폴리오</p>
                 <div class="w-12 h-1 bg-blue-800 mx-auto mt-4 rounded"></div>
             </div>
 
-            <!-- Admin Portfolio Addition Form Wrapper -->
             <div id="portfolio-admin-wrapper" class="hidden max-w-2xl mx-auto mb-16 bg-white border border-blue-200 rounded-xl p-6 shadow-md">
                 <h3 class="font-bold text-slate-900 text-base mb-4 flex items-center space-x-1.5">
                     <i class="fa-solid fa-plus text-blue-800"></i>
@@ -453,7 +349,6 @@
                         </div>
                     </div>
 
-                    <!-- Video Source Select -->
                     <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-2">
                         <label class="block text-xs font-bold text-slate-700">영상 파일 제공 방식</label>
                         <div class="flex items-center space-x-4 text-xs">
@@ -468,7 +363,6 @@
                         </div>
                     </div>
 
-                    <!-- Thumbnail Source Select -->
                     <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 space-y-2">
                         <label class="block text-xs font-bold text-slate-700">대표 썸네일 이미지 방식</label>
                         <div class="flex items-center space-x-4 text-xs">
@@ -490,19 +384,12 @@
                 </form>
             </div>
 
-            <!-- Portfolio Interactive Grid Container -->
-            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Dynamically loaded elements -->
-            </div>
-
+            <div id="portfolio-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
         </div>
     </section>
 
-    <!-- REQUEST SECTION -->
     <section id="request" class="py-24 bg-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Title -->
             <div class="text-center mb-16">
                 <h2 data-editable-key="title_req_sub" class="text-base font-bold text-blue-800 uppercase tracking-widest mb-3">PROJECT REQUEST</h2>
                 <p data-editable-key="title_req_main" class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">제작 및 견적 문의</p>
@@ -510,16 +397,13 @@
                 <p data-editable-key="request_caption" class="text-sm text-slate-500 mt-4 max-w-lg mx-auto">기획안 검토부터 제작 스케줄 설계까지, 에스비엔의 영상 전문 팀이 확인하여 신속하게 제안 피드백을 전달드립니다.</p>
             </div>
 
-            <!-- Request Interactive Form -->
             <div class="bg-slate-50 border border-slate-100 rounded-2xl p-6 sm:p-10 shadow-md">
                 <form id="request-form" onsubmit="handleRequestSubmit(event)" class="space-y-6">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <!-- 상호명 -->
                         <div>
                             <label for="req-company" class="block text-sm font-semibold text-slate-700 mb-1.5">상호명 또는 기관명 <span class="text-red-500">*</span></label>
                             <input type="text" id="req-company" required class="w-full text-sm px-4 py-3 bg-white border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-800 focus:outline-none transition-all" placeholder="예: (주)에스비엔">
                         </div>
-                        <!-- 담당자명 -->
                         <div>
                             <label for="req-name" class="block text-sm font-semibold text-slate-700 mb-1.5">담당자 성함 <span class="text-red-500">*</span></label>
                             <input type="text" id="req-name" required class="w-full text-sm px-4 py-3 bg-white border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-800 focus:outline-none transition-all" placeholder="예: 홍길동 팀장">
@@ -527,12 +411,10 @@
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <!-- 연락처 -->
                         <div>
                             <label for="req-tel" class="block text-sm font-semibold text-slate-700 mb-1.5">연락처 <span class="text-red-500">*</span></label>
                             <input type="tel" id="req-tel" required class="w-full text-sm px-4 py-3 bg-white border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-800 focus:outline-none transition-all" placeholder="예: 010-1234-5678">
                         </div>
-                        <!-- 이메일 -->
                         <div>
                             <label for="req-email" class="block text-sm font-semibold text-slate-700 mb-1.5">이메일 주소 <span class="text-red-500">*</span></label>
                             <input type="email" id="req-email" required class="w-full text-sm px-4 py-3 bg-white border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-800 focus:outline-none transition-all" placeholder="예: example@company.com">
@@ -540,25 +422,21 @@
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <!-- 예산 -->
                         <div>
                             <label for="req-budget" class="block text-sm font-semibold text-slate-700 mb-1.5">예산 (텍스트 입력) <span class="text-red-500">*</span></label>
                             <input type="text" id="req-budget" required class="w-full text-sm px-4 py-3 bg-white border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-800 focus:outline-none transition-all" placeholder="예: 2,000만원 내외 / 미정">
                         </div>
-                        <!-- 참고 URL -->
                         <div>
                             <label for="req-url" class="block text-sm font-semibold text-slate-700 mb-1.5">참고 레퍼런스 영상 URL</label>
                             <input type="url" id="req-url" class="w-full text-sm px-4 py-3 bg-white border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-800 focus:outline-none transition-all" placeholder="예: https://youtube.com/...">
                         </div>
                     </div>
 
-                    <!-- 문의내용 -->
                     <div>
                         <label for="req-message" class="block text-sm font-semibold text-slate-700 mb-1.5">상세 문의내용 <span class="text-red-500">*</span></label>
                         <textarea id="req-message" required rows="5" class="w-full text-sm px-4 py-3 bg-white border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-800 focus:outline-none transition-all" placeholder="제작하고자 하는 영상의 종류(예: 홍보, 광고, 행사 중계 등), 러닝타임, 촬영지 요구사항, 대략적인 희망 완료 일정 등 자유롭게 기술해 주세요."></textarea>
                     </div>
 
-                    <!-- 개인정보수집동의 체크 -->
                     <div class="flex items-start">
                         <input id="agree" type="checkbox" required class="h-4.5 w-4.5 rounded border-slate-300 text-blue-800 focus:ring-blue-800 mt-1">
                         <label for="agree" class="ml-2.5 text-xs sm:text-sm text-slate-500 leading-normal">
@@ -566,7 +444,6 @@
                         </label>
                     </div>
 
-                    <!-- 제출하기 버튼 -->
                     <div class="pt-2">
                         <button type="submit" class="w-full py-4 bg-blue-800 hover:bg-blue-700 text-white font-bold rounded-lg shadow-lg hover:shadow-blue-900/20 transition-all duration-200">
                             <span data-editable-key="btn_form_submit">견적 문의하기</span>
@@ -574,22 +451,17 @@
                     </div>
                 </form>
             </div>
-
         </div>
     </section>
 
-    <!-- NOTICE BOARD SECTION -->
     <section id="notice" class="py-24 bg-slate-50 border-y border-slate-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Title -->
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 data-editable-key="title_notice_sub" class="text-base font-bold text-blue-800 uppercase tracking-widest mb-3">SBN NOTICE</h2>
                 <p data-editable-key="title_notice_main" class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">공지사항</p>
                 <div class="w-12 h-1 bg-blue-800 mx-auto mt-4 rounded"></div>
             </div>
 
-            <!-- Admin Notice Control Panel wrapper -->
             <div id="notice-admin-wrapper" class="hidden bg-white border border-blue-200 rounded-xl p-6 mb-10 shadow-md">
                 <h3 class="font-bold text-slate-900 text-base mb-4 flex items-center space-x-1.5">
                     <i class="fa-solid fa-plus text-blue-800"></i>
@@ -616,7 +488,6 @@
                 </form>
             </div>
 
-            <!-- Notice Table / List Layout -->
             <div class="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-md">
                 <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse">
@@ -628,21 +499,15 @@
                                 <th id="notice-admin-th" class="py-4.5 px-6 w-24 text-center hidden">관리</th>
                             </tr>
                         </thead>
-                        <tbody id="notice-tbody" class="divide-y divide-slate-100 text-sm text-slate-700">
-                            <!-- Dynamic notices element insertion -->
-                        </tbody>
+                        <tbody id="notice-tbody" class="divide-y divide-slate-100 text-sm text-slate-700"></tbody>
                     </table>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- LOCATION & MAP SECTION -->
     <section id="location" class="py-24 bg-white">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Title -->
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 data-editable-key="title_loc_sub" class="text-base font-bold text-blue-800 uppercase tracking-widest mb-3">CONTACT US</h2>
                 <p data-editable-key="title_loc_main" class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">오시는 길</p>
@@ -650,8 +515,6 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                
-                <!-- Direction & Details Information (Col Span 5) -->
                 <div class="lg:col-span-5 space-y-6">
                     <div class="space-y-4">
                         <span class="inline-block px-3 py-1 bg-blue-50 text-blue-800 text-xs font-bold rounded">HEADQUARTER</span>
@@ -668,7 +531,6 @@
                                 <p data-editable-key="loc_addr" class="text-slate-600 text-sm mt-0.5">서울특별시 금천구 가산디지털1로 88, IT프리미어타워 1005호</p>
                             </div>
                         </div>
-
                         <div class="flex items-start space-x-3">
                             <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs flex-shrink-0 mt-1">
                                 <i class="fa-solid fa-train"></i>
@@ -678,7 +540,6 @@
                                 <p data-editable-key="loc_subway" class="text-slate-600 text-sm mt-0.5">1, 7호선 가산디지털단지역 7번 출구에서 800m쯤 직진 후 좌측 IT프리미어타워 건물 진입 (도보 약 11분 소요, 엘리베이터 10층 이용)</p>
                             </div>
                         </div>
-
                         <div class="flex items-start space-x-3">
                             <div class="w-5 h-5 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs flex-shrink-0 mt-1">
                                 <i class="fa-solid fa-phone"></i>
@@ -702,7 +563,6 @@
                     </div>
                 </div>
 
-                <!-- Map View Area -->
                 <div class="lg:col-span-7">
                     <div class="relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl h-[440px] text-white">
                         <div class="absolute top-0 left-0 w-full bg-slate-950/95 border-b border-slate-800 p-4 z-20 flex items-center justify-between">
@@ -719,7 +579,6 @@
                         <div class="absolute inset-0 bg-slate-950 pt-16 pb-12 px-4 flex flex-col justify-between select-none">
                             <div class="relative w-full h-full bg-slate-900 border border-slate-800/60 rounded-xl overflow-hidden">
                                 <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] z-0"></div>
-
                                 <div class="absolute left-[72%] w-12 top-0 bottom-0 bg-slate-950/90 border-l border-r border-slate-800/80 flex flex-col justify-around items-center z-10 overflow-hidden">
                                     <div class="w-full h-full opacity-30 flex flex-col justify-between py-1">
                                         <div class="h-[1px] w-full bg-slate-500"></div>
@@ -782,7 +641,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start mb-12">
@@ -825,7 +683,6 @@
         </div>
     </footer>
 
-    <!-- FLOATING BUTTON SYSTEM -->
     <div class="fixed bottom-6 right-6 z-40 flex flex-col space-y-2.5">
         <a href="#request" aria-label="제작문의 바로가기" class="w-12 h-12 bg-blue-800 hover:bg-blue-700 text-white rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-105">
             <i class="fa-solid fa-paper-plane text-base"></i>
@@ -835,9 +692,6 @@
         </button>
     </div>
 
-    <!-- MODALS CONTAINER -->
-
-    <!-- Admin Password Challenge Modal -->
     <div id="admin-password-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4">
         <div class="relative w-full max-w-sm bg-white rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
             <div class="p-6 sm:p-8 space-y-5">
@@ -848,7 +702,6 @@
                     <h3 class="text-base font-bold text-slate-900">SBN 관리자 인증</h3>
                     <p class="text-xs text-slate-500">인프라 및 모든 텍스트 수정을 위해 암호를 입력하세요.</p>
                 </div>
-
                 <form onsubmit="submitAdminPassword(event)" class="space-y-4">
                     <div>
                         <input type="password" id="admin-password-input" class="w-full text-center tracking-widest text-lg font-mono px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-800 focus:outline-none" placeholder="••••" maxlength="8">
@@ -856,7 +709,6 @@
                             <i class="fa-solid fa-circle-exclamation mr-1"></i>비밀번호가 일치하지 않습니다.
                         </p>
                     </div>
-
                     <div class="grid grid-cols-2 gap-3 pt-1">
                         <button type="button" onclick="closeAdminPasswordModal()" class="py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-bold rounded-lg transition-all">취소</button>
                         <button type="submit" class="py-2.5 bg-blue-800 hover:bg-blue-700 text-white text-xs font-bold rounded-lg transition-all shadow">인증 완료</button>
@@ -866,7 +718,6 @@
         </div>
     </div>
 
-    <!-- 1. Portfolio Video Player Modal -->
     <div id="video-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4">
         <div class="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
             <div class="absolute top-4 right-4 z-10">
@@ -888,7 +739,6 @@
         </div>
     </div>
 
-    <!-- 2. Notice Detail Modal -->
     <div id="notice-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4">
         <div class="relative w-full max-w-xl bg-white rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
             <div class="p-6 sm:p-8 space-y-6">
@@ -915,7 +765,6 @@
         </div>
     </div>
 
-    <!-- 3. Success Feedback Overlay -->
     <div id="success-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4">
         <div class="relative w-full max-w-md bg-white rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
             <div class="p-8 text-center space-y-6">
@@ -936,7 +785,6 @@
         </div>
     </div>
 
-    <!-- 4. Studio Photo Adder Modal -->
     <div id="add-photo-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-sm p-4">
         <div class="relative w-full max-w-md bg-white rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
             <div class="p-6 sm:p-8 space-y-6">
@@ -966,7 +814,6 @@
     </div>
 
 
-    <!-- BUSINESS SCRIPT LOGIC -->
     <script>
         // --- 1. CONFIG & DEFAULT STATE ---
         let isAdminActive = false;
@@ -1112,7 +959,7 @@
             });
         }
 
-        // --- 4. TEXT MANAGEMENT SYSTEM (Admin editable engine) ---
+        // --- 4. TEXT MANAGEMENT SYSTEM ---
         function initEditableTexts() {
             document.querySelectorAll('[data-editable-key]').forEach(el => {
                 const key = el.getAttribute('data-editable-key');
@@ -1158,7 +1005,6 @@
             document.getElementById('admin-password-modal').classList.add('hidden');
         }
 
-        // Standard administrator password is '0618'
         function submitAdminPassword(e) {
             e.preventDefault();
             const pwInput = document.getElementById('admin-password-input');
@@ -1208,7 +1054,7 @@
             renderAll();
         }
 
-        // --- 6. STUDIO GALLERY DATA OPERATION (CRUD) ---
+        // --- 6. STUDIO GALLERY CRUD ---
         function openAddStudioPhotoModal() { document.getElementById('add-photo-modal').classList.remove('hidden'); }
         function closeAddStudioPhotoModal() {
             document.getElementById('add-photo-modal').classList.add('hidden');
@@ -1241,7 +1087,7 @@
             renderStudioPhotos();
         }
 
-        // --- 7. PORTFOLIO DATA OPERATION (CRUD) ---
+        // --- 7. PORTFOLIO DATA OPERATION (FIXED MULTI-UPLOAD) ---
         function togglePortVideoSourceView() {
             const type = document.querySelector('input[name="video-src-type"]:checked').value;
             if(type === 'url') {
@@ -1271,24 +1117,8 @@
             const thumbType = document.querySelector('input[name="thumb-src-type"]:checked').value;
 
             let finalVideoData = "";
-            let finalThumbData = "";
 
-            const proceedSaving = () => {
-                const list = JSON.parse(localStorage.getItem('sbn_portfolios')) || [];
-                list.push({
-                    id: "port-" + Date.now(),
-                    title, tag, desc,
-                    videoUrl: finalVideoData,
-                    thumbUrl: finalThumbData,
-                    type: videoType
-                });
-                localStorage.setItem('sbn_portfolios', JSON.stringify(list));
-                renderPortfolios();
-                document.getElementById('portfolio-add-form').reset();
-                togglePortVideoSourceView();
-                togglePortThumbSourceView();
-            };
-
+            // 비디오 소스 결정
             if(videoType === 'url') {
                 let rawUrl = document.getElementById('port-video-url').value.trim();
                 if (rawUrl.includes("youtube.com/watch?v=")) {
@@ -1304,27 +1134,48 @@
                 if(vFile) finalVideoData = URL.createObjectURL(vFile);
             }
 
+            // 공통 저장 비동기 래퍼 함수
+            const saveItemToList = (thumbUrlString) => {
+                const list = JSON.parse(localStorage.getItem('sbn_portfolios')) || [];
+                list.push({
+                    id: "port-" + Date.now(),
+                    title: title,
+                    tag: tag,
+                    desc: desc,
+                    videoUrl: finalVideoData,
+                    thumbUrl: thumbUrlString,
+                    type: videoType
+                });
+                localStorage.setItem('sbn_portfolios', JSON.stringify(list));
+                renderPortfolios();
+                document.getElementById('portfolio-add-form').reset();
+                togglePortVideoSourceView();
+                togglePortThumbSourceView();
+            };
+
+            // 썸네일 소스에 따른 조건부 비동기 실행 및 데이터 직렬화 보장
             if(thumbType === 'file') {
                 const tFile = document.getElementById('port-thumb-file').files[0];
                 if(tFile) {
                     const tReader = new FileReader();
                     tReader.onload = function(evt) {
-                        finalThumbData = evt.target.result;
-                        proceedSaving();
+                        saveItemToList(evt.target.result);
                     };
                     tReader.readAsDataURL(tFile);
-                    return;
+                } else {
+                    saveItemToList("https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=800");
                 }
             } else {
+                let autoThumb = "";
                 if(videoType === 'url' && finalVideoData.includes('embed/')) {
                     const segments = finalVideoData.split('/');
                     const ytId = segments[segments.length - 1]?.split('?')[0];
-                    finalThumbData = `https://img.youtube.com/vi/${ytId}/hqdefault.jpg`;
+                    autoThumb = `https://img.youtube.com/vi/${ytId}/hqdefault.jpg`;
                 } else {
-                    finalThumbData = "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=800";
+                    autoThumb = "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=800";
                 }
+                saveItemToList(autoThumb);
             }
-            proceedSaving();
         }
 
         function deletePortfolio(id) {
@@ -1392,7 +1243,6 @@
             document.body.classList.remove('overflow-hidden');
         }
 
-        // 공지사항 모달 열기
         function openNoticeModal(id) {
             const list = JSON.parse(localStorage.getItem('sbn_notices')) || [];
             const item = list.find(x => x.id === id);
@@ -1411,7 +1261,7 @@
             document.body.classList.remove('overflow-hidden');
         }
 
-        // --- 10. REAL EMAIL DISPATCHER (mailto Link architecture) ---
+        // --- 10. REAL EMAIL DISPATCHER (FIXED SAFE LINK INTEGRATION) ---
         function handleRequestSubmit(e) {
             e.preventDefault();
             
@@ -1443,10 +1293,16 @@
             document.getElementById('summary-name').innerText = name;
             document.getElementById('summary-budget').innerText = budget;
 
+            // 모달 표시 처리
             document.getElementById('success-modal').classList.remove('hidden');
             document.body.classList.add('overflow-hidden');
 
-            window.location.href = `mailto:${targetRecipient}?subject=${emailSubject}&body=${emailBody}`;
+            // 브라우저 멈춤 우회 및 mailto 스레드 강제 실행을 위한 동적 Anchor 가상 돔 생성 기법 적용
+            const mailtoAnchor = document.createElement('a');
+            mailtoAnchor.href = `mailto:${targetRecipient}?subject=${emailSubject}&body=${emailBody}`;
+            document.body.appendChild(mailtoAnchor);
+            mailtoAnchor.click(); // 시스템 기본 메일 앱 호출 트리거
+            document.body.removeChild(mailtoAnchor);
 
             document.getElementById('request-form').reset();
         }
